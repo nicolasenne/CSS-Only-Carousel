@@ -1,0 +1,139 @@
+<div class="container">
+  
+  <!-- HERO CAROUSEL -->
+  <div class="hero-carousel">
+
+    <div class="hero-slides">
+      
+      <div class="hero-slide">
+        <img src="https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?q=80&w=3271&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        <div class="hero-content">
+          <h2>Discover New Horizons</h2>
+          <p>Explore ideas, stories, and inspiration.</p>
+        </div>
+      </div>
+
+      <div class="hero-slide">
+        <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" alt="">
+        <div class="hero-content">
+          <h2>Design That Inspires</h2>
+          <p>Crafting digital experiences that matter.</p>
+        </div>
+      </div>
+
+      <div class="hero-slide">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="">
+        <div class="hero-content">
+          <h2>Build Smarter</h2>
+          <p>Modern solutions for complex challenges.</p>
+        </div>
+      </div>
+
+      <div class="hero-slide">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="">
+        <div class="hero-content">
+          <h2>Stay Ahead</h2>
+          <p>Insights that keep you moving forward.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BLOG SIDE -->
+  <div class="blog">
+    <h2>Blog Banner</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit et accusamus placeat, impedit eum rem, vero saepe deserunt officia natus at explicabo aspernatur.</p>
+    <button class="button" role="button">Button</button>
+  </div>
+
+</div>
+
+<style>
+/* ===== Layout ===== */
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ===== Carousel ===== */
+.hero-carousel {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  border-radius: 8px;
+}
+
+.hero-slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  animation: hero-auto 15s infinite;
+}
+
+.hero-slide {
+  width: 100%;
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+/* Images */
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== Animation ===== */
+@keyframes hero-auto {
+  0%, 20%   { transform: translateX(0); }
+  25%, 45%  { transform: translateX(-100%); }
+  50%, 70%  { transform: translateX(-200%); }
+  75%, 95%  { transform: translateX(-300%); }
+  100%      { transform: translateX(0); }
+}
+
+/* Pause on hover */
+.hero-carousel:hover .hero-slides {
+  animation-play-state: paused;
+}
+
+/* ===== Blog ===== */
+.blog {
+  background: #f5f5f5;
+  padding: 40px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.blog h2, .blog p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.button {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: .4s;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #F082AC;
+}
+</style>
+
